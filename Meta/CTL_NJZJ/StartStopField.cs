@@ -13,5 +13,11 @@ namespace GLMonitoringSystem.Devices.Meta.CTL_NJZJ
             //hour = value / 60;
             //minute = value % 60;
         }
-    }
+
+        public override string getValueString()
+        {
+            return string.Format("{0:D2}:{1:D2}", value / 60, value % 60);
+        }
+    
+}
 }

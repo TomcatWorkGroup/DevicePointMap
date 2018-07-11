@@ -9,6 +9,7 @@ namespace GLMonitoringSystem.Devices.Map
     class DevicePointMap_CTL_NJZJ_IPK2 : DevicePointMap
     {
         public const string Key = "CTL_NJZJ_IPK2";
+        Dictionary<int, string> coms_open_close = new Dictionary<int, string> { { 0, "关" }, { 1, "开"} };
         Dictionary<int, string> coms_level = new Dictionary<int, string> { { 0, "缺水" }, { 1, "低报警" }, { 2, "低位" }, { 3, "正常" }, { 4, "高位" }, { 5, "超高位" }, { 6, "逻辑错" } };
         Dictionary<int, string> coms_device = new Dictionary<int, string> { { 0xC0, "手" }, { 0x3F, "自" }, { 0x30, "备" }, { 0xCF, "主" }, { 0x0F, "启" }, { 0xF0, "停" } };
         public DevicePointMap_CTL_NJZJ_IPK2()
@@ -31,7 +32,7 @@ namespace GLMonitoringSystem.Devices.Map
 
             map.Add("ba_moshibianhao", ByteField.Init(new Meta.CTL_NJZJ.BaseInfoField(), "ba_moshibianhao", 29, 1, "模式编号"));
 
-            map.Add("ba_fangdongkaiguan", ByteField.Init(new Meta.CTL_NJZJ.BaseInfoField(), "ba_fangdongkaiguan", 30, 1, "防冻开关", new Dictionary<int, string> { { 0, "防冻关闭" }, { 1, "防冻启用" } }));
+            map.Add("ba_fangdongkaiguan", ByteField.Init(new Meta.CTL_NJZJ.BaseInfoField(), "ba_fangdongkaiguan", 30, 1, "防冻开关", coms_open_close));
 
             map.Add("ex_paiyanwendugaobaojing", ByteField.Init(new Meta.CTL_NJZJ.ExceptionField(), "ex_paiyanwendugaobaojing", 32, 1, "排烟温度高报警"));
 

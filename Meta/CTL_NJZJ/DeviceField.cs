@@ -7,7 +7,7 @@ namespace GLMonitoringSystem.Devices.Meta.CTL_NJZJ
         protected StringBuilder sb = new StringBuilder();
 
         /// <summary>
-        /// byte数组 高位在前，低位在后
+        /// byte数组 低位在前高位在后
         /// </summary>
         /// <param name="bytes"></param>
         /// <returns></returns>

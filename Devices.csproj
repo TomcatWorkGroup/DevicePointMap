@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map\DevicePointMap_CTL_NJZJ_IPK2.cs" />
+    <Compile Include="Map\DevicePointMap_PLC_DianZhengQi.cs" />
     <Compile Include="Map\MapHelper.cs" />
-    <Compile Include="Map\PlcPointMap_DianZhengQi.cs" />
     <Compile Include="Meta\BaseInfoField.cs" />
     <Compile Include="Meta\ByteField.cs" />
     <Compile Include="Meta\CTL_NJZJ\RanShaoQiField.cs" />
